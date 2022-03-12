@@ -6,7 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inscrição</title>
     <style>
+        *{
+            box-sizing: border-box;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+        }
         main {
+            color:#666;
             background-color: #F0F0F0;
             width: 400px;
             min-height: 300px;
@@ -16,9 +22,33 @@
             padding: 20px;
         }
 
-        label{
-            margin-bottom: 5px;
+        input,select{
+            border:1px #e0e0e0 solid;
+            padding: 5px;
+            display: block;
+            width: 100%;
         }
+
+        label{
+            
+            font-size: 12px;
+            margin-bottom: 10px;
+        }
+
+        fieldset{
+            border:1px #999 solid;
+            display:inline-block;
+        }
+
+        .contato{
+            display: flex;
+            letter-spacing: 3px;
+        }
+
+        .cnt{
+            padding: 10px;
+        }
+        
     </style>
 </head>
 <body>
@@ -57,7 +87,7 @@
         <label>
             Estado:
             <select>
-                <option disabled selected>escolha um estado</option>
+                <option disabled selected>Escolha um estado</option>
                 <optgroup label="Norte">
                     <option value="AC">Acre</option>
                     <option value="AP">Amapá</option>
@@ -85,10 +115,12 @@
         <!-- Meio de contato preferido: Telefone, whatsapp, SMS ou email -->
         <fieldset>
             <legend>Meios de contato</legend>
-            <label><input name="meioDeContato"type="radio">Whatsapp</label>
-            <label><input name="meioDeContato"type="radio">Telefone</label>
-            <label><input name="meioDeContato"type="radio">SMS</label>
-            <label><input name="meioDeContato"type="radio">E-mail</label>
+            <div class="contato">
+            <label class="cnt"><input name="meioDeContato"type="radio">Whatsapp</label>
+            <label class="cnt"><input name="meioDeContato"type="radio">Telefone</label>
+            <label class="cnt"><input name="meioDeContato"type="radio">SMS</label>
+            <label class="cnt"><input name="meioDeContato"type="radio">E-mail</label>
+            </div>
         </fieldset>
     
         <!-- Disponibilidade: Manhã, tarde, noite -->
