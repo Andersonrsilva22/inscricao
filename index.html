@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,24 +11,85 @@
             width: 400px;
             min-height: 300px;
             margin: 50px auto;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+        }
+
+        label{
+            margin-bottom: 5px;
         }
     </style>
 </head>
 <body>
     <main>
         <!-- o nome -->
+        <label>
+            Nome:
+            <input type="text" id="nome" placeholder="Digite seu nome" required>
+        </label>
+
+        <!-- email -->
+        <label>
+            Email:
+            <input type="email" id="email" name="email" placeholder="Digite seu email" required>
+        </label>
     
         <!-- senha -->
+        <label>
+            Senha:
+            <input type="password" id="senha" name="password" placeholder="Digite seu email">
+        </label>
         
         <!-- confirmação de senha -->
+        <label>
+            Confirme sua Senha:
+            <input type="password" id="confirmacao" placeholder="Digite seu email">
+        </label>
     
         <!-- data de nascimento -->
+        <label>
+            Data de Nascimento:
+            <input type="date" id="data-nascimento">
+        </label>
     
         <!-- estado -->
+        <label>
+            Estado:
+            <select>
+                <option disabled selected>escolha um estado</option>
+                <optgroup label="Norte">
+                    <option value="AC">Acre</option>
+                    <option value="AP">Amapá</option>
+                </optgroup>
+                <optgroup label="Sudeste">
+                    <option value="ES">Espirito Santo</option>
+                    <option value="SP">São Paulo</option>
+                </optgroup>
+                <optgroup label="Sul">
+                    <option value="PR">Paraná</option>
+                    <option value="AP">Santa Catarina</option>
+                </optgroup>
+            </select>
+        </label>
     
         <!-- cidade -->
+
+        <!--Número de filhos-->
+        <label>
+            Numero de filhos:
+            <input type="number" value="0" max="" min="0">
+        </label>
+        
     
         <!-- Meio de contato preferido: Telefone, whatsapp, SMS ou email -->
+        <fieldset>
+            <legend>Meios de contato</legend>
+            <label><input name="meioDeContato"type="radio">Whatsapp</label>
+            <label><input name="meioDeContato"type="radio">Telefone</label>
+            <label><input name="meioDeContato"type="radio">SMS</label>
+            <label><input name="meioDeContato"type="radio">E-mail</label>
+        </fieldset>
     
         <!-- Disponibilidade: Manhã, tarde, noite -->
         
